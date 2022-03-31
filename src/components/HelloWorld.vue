@@ -1,13 +1,16 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import { useRouter } from 'vue-router';
 
-defineProps<{ msg: string }>()
-
+const router = useRouter();
+function go(){
+router.push({path:"/test"});
+}
 const count = ref(0)
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
+  <h1>Plantilla</h1>
 
   <p>
     Recommended IDE setup:
@@ -27,6 +30,7 @@ const count = ref(0)
   </p>
 
   <button type="button" @click="count++">count is: {{ count }}</button>
+  <button type="button" @click="go()">GO</button>
   <p>
     Edit
     <code>components/HelloWorld.vue</code> to test hot module replacement.
