@@ -19,5 +19,5 @@ test('Prueba piloto router', async () => {
 
     const wrapper = mount(HelloWorld);
     await wrapper.find("[data-test='button']").trigger('click');
-    expect(push).toHaveBeenCalledTimes(1);
+    expect(push).toHaveBeenCalled();
 });

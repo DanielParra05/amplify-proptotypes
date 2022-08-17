@@ -3,8 +3,13 @@ import { ref } from 'vue'
 import { useRouter } from 'vue-router';
 
 const router = useRouter();
+
+const aux = ref(false)
 function go(){
-router.push({path:"/test"});
+  //aux.value = true
+  if ( aux.value) {
+    router.push({path:"/test"});
+  }
 }
 const count = ref(0)
 </script>
