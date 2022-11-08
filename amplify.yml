@@ -5,6 +5,7 @@ frontend:
       commands:
         - npm install
         - npm i --save-dev @types/node
+        - npm i --save-dev @types/ws
     build:
       commands: 
         - npm run build
